@@ -23,7 +23,7 @@ Swift code to programmatically execute local or hosted JXA payloads without usin
 > ./JXARunner -f [local_path_to_payload]
 
 **Note: This is the programmatic alternative to the command line execution of:
-*osascript -l JavaScvript -e "eval(ObjC.unwrap($.NSString.stringWithContentsOfFile('[filePath]')));"
+*osascript -l JavaScvript -e "eval(ObjC.unwrap($.NSString.stringWithContentsOfFile('[filePath]')));"*
 ## Notes
 In its current form, this script does **NOT** background the JXA payload. So you will need to take care of that manually at execution time. Some options for doing so are below:
 
