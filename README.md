@@ -27,10 +27,14 @@ Swift code to programmatically execute local or hosted JXA payloads without usin
 ## Notes
 In its current form, this script does **NOT** background the JXA payload. So you will need to take care of that manually at execution time. Some options for doing so are below:
 
-- If you want the launched JXA payload to continue even after the Terminal you are using is closed, you can run JXA Runner in this manner:
+- If you want the launched JXA payload to continue even after the Terminal you are using is closed, you can run JXA Runner in this manner (note: this will cause a nohup.out file to be dropped to the current directory or to the home directory):
 
 > nohup ./JXARunner -u [url_to_jxa_payload]
 
+- If you want the launched JXA payload to continue after the Terminal is closed and you do not want to create the nohup.out file, you can run JXA runner in the following manner:
+
+> nohup ./JXARunner -u [url_to_jxa_payload] > /dev/null 2>&1&
+
 - If you simply want to spawn JXA Runner backgrounded you can run it in this manner (however, if the Terminal window is closed the JXA payload will stop running):
 
-> ./JXARunner -f [path_to_local_jxa_payload] &
+> ./JXARunner -u [url_to_jxa_payload] &
