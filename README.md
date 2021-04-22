@@ -38,3 +38,6 @@ In its current form, this script does **NOT** background the JXA payload. So you
 - If you simply want to spawn JXA Runner backgrounded you can run it in this manner (however, if the Terminal window is closed the JXA payload will stop running):
 
 > ./JXARunner -u [url_to_jxa_payload] &
+
+## Detection
+If **nohup** is being used to cause the executed payload to live beyond the Terminal, searching for nohup command line executions would return this activity (and may be a good idea in general to see what else in an environment is running commands with nohup).
