@@ -25,7 +25,7 @@ Swift code to programmatically execute local or hosted JXA payloads without usin
 **Note: This is the programmatic alternative to the command line execution of:
 *osascript -l JavaScvript -e "eval(ObjC.unwrap($.NSString.stringWithContentsOfFile('[filePath]')));"
 ## Notes
-- In its current form, this script does **NOT** background the JXA payload. So you will need to take care of that manually at execution time. Some options for doing so are below:
+In its current form, this script does **NOT** background the JXA payload. So you will need to take care of that manually at execution time. Some options for doing so are below:
 
 - If you want the launched JXA payload to continue even after the Terminal you are using is closed, you can run JXA Runner in this manner:
 
